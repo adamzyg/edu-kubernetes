@@ -1,0 +1,51 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: devops-nginx
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+  - host: nginx.xiodi.cn
+    http:
+      paths:
+      - backend:
+          serviceName: devops-nginx
+          servicePort: 80
+
+---
+
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: devops-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
+      service: devops-nginx
+  template:
+    metadata:
+      labels:
+        type: frontend
+        service: devops-nginx
+    spec:
+      containers:
+      - name: frontend
+        image: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-nginx
+spec:
+  ports:
+  - port: 80
+  selector:
+    type: frontend
+    service: devops-nginx

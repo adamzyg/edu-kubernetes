@@ -1,0 +1,33 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: devops-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: frontend
+      service: devops-nginx
+  template:
+    metadata:
+      labels:
+        type: frontend
+        service: devops-nginx
+    spec:
+      containers:
+      - name: frontend
+        image: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-nginx
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+  selector:
+    type: frontend
+    service: devops-nginx

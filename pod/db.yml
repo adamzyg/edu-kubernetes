@@ -11,17 +11,3 @@ spec:
     image: mongo:3.3
     command: ["mongod"]
     args: ["--rest", "--httpinterface"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
