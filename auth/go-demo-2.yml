@@ -8,7 +8,8 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - http:
+  - host: go-demo-2.com
+    http:
       paths:
       - path: /demo
         backend:
@@ -75,8 +76,10 @@ spec:
       - name: api
         image: aishangwei/go-demo-2
         env:
-        - name: DB
-          value: go-demo-2-db
+        # - name: DB
+        #   value: go-demo-2-db
+        - name: DB_ENV
+          value: GO_DEMO_2_DB_SERVICE_HOST
         readinessProbe:
           httpGet:
             path: /demo/hello

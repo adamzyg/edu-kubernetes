@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: vfarcic/jenkins
+        image: aishangwei/jenkins
         env:
         - name: JENKINS_OPTS
           value: --prefix=/jenkins
