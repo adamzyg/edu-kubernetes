@@ -1,0 +1,16 @@
+name: go-demo-3
+version: 0.0.1
+apiVersion: v1
+description: A silly demo based on API written in Go and MongoDB
+keywords:
+- api
+- backend
+- go
+- database
+- mongodb
+home: http://blog.aishangwei.net/
+sources:
+- https://blog.aishangwei.net/go-demo-3
+maintainers:
+- name: jack
+  email: jack@aishangwei.net

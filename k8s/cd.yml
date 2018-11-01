@@ -4,6 +4,8 @@ metadata:
   name: cd
   namespace: go-demo-3-build
 spec:
+  imagePullSecrets:
+  - name: registry-secret
   containers:
   - name: docker
     image: docker:18.03-git

@@ -106,7 +106,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: vfarcic/go-demo-3
+        image: aishangwei/go-demo-3
         env:
         - name: DB
           value: db

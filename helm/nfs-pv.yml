@@ -10,7 +10,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -24,7 +24,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -38,7 +38,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -52,7 +52,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 5Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -80,7 +80,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -94,7 +94,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -108,7 +108,7 @@ spec:
     server: 192.168.20.174
   accessModes: ["ReadWriteMany","ReadWriteOnce"]
   capacity:
-    storage: 2Gi
+    storage: 8Gi
 ---
 apiVersion: v1
 kind: PersistentVolume
